@@ -13,7 +13,3 @@ function caixaDupla<T, U>(item1: T, item2: U): any {
 }
 
 caixaDupla("Joana Dark", 99);
-
-class Pessoa {
-  dado: T;
-}
