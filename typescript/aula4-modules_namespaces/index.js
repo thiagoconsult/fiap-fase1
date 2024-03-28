@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var modulos_1 = require("./modulos");
+var namespaces2_1 = require("./namespaces2");
+var namespaces3_1 = require("./namespaces3");
+var namespaces4_1 = require("./namespaces4");
+console.log("Somar: ", (0, modulos_1.Somar)(10, 20));
+console.log("Subtrair: ", (0, modulos_1.subtrair)(10, 20));
+console.log("Somar namespaces 2: ", namespaces2_1.Matematica.Somar(100, 200));
+var joao = new namespaces3_1.Escola.Aluno("João do Pulo", "Oliveira", 100, "Agricultura");
+joao.saudacao();
+var joana = new namespaces3_1.Escola.Professor("Joana Dark", "Da Silva", 100, "Agricultura");
+joana.saudacao();
+var madalena = new namespaces4_1.Escolinha.Aluno("Madalena", 100, "Acre", "Flavia");
+madalena.saudacao();
