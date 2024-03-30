@@ -2,8 +2,7 @@ import mongoose from "mongoose";
 
 let conn: any = null;
 
-const uri: string =
-  "mongodb+srv://thiagoconsultx:Abacaxi000@biblioteca.x08pzd8.mongodb.net/?retryWrites=true&w=majority&appName=Biblioteca";
+const uri: any = process.env.URI_MONGO;
 
 export async function run() {
   if (conn === null) {

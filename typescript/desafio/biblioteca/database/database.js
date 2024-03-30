@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.run = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 let conn = null;
-const uri = "mongodb+srv://thiagoconsultx:Abacaxi000@biblioteca.x08pzd8.mongodb.net/?retryWrites=true&w=majority&appName=Biblioteca";
+const uri = process.env.URI_MONGO;
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         if (conn === null) {

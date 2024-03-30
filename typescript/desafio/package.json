@@ -4,7 +4,7 @@
   "description": "",
   "main": "api.js",
   "scripts": {
-    "start": "node api"
+    "start": "node -r dotenv/config api"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,7 @@
     "@types/express": "^4.17.21",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^20.11.30",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongoose": "^8.2.4"
   }

@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const livros_controller_1 = require("./biblioteca/controllers/livros.controller");
 const database_1 = require("./biblioteca/database/database");
+const PORT = process.env.PORT;
 const app = (0, express_1.default)();
 (0, database_1.run)();
 app.use(express_1.default.json());
@@ -32,6 +33,6 @@ app.post("/livros", (req, res) => __awaiter(void 0, void 0, void 0, function* ()
 app.use((req, res, next) => {
     res.sendStatus(404);
 });
-app.listen(3000, () => {
-    console.log("server started at port 3000 ");
+app.listen(PORT, () => {
+    console.log(`server started at port ${PORT} `);
 });
