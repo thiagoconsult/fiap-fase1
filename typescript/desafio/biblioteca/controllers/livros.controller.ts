@@ -16,3 +16,13 @@ export async function create(_livro: ILivros) {
 
   return null;
 }
+
+export async function getLivros() {
+  let result = await livro.find({});
+
+  if (result) {
+    return result;
+  }
+
+  return null;
+}

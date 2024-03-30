@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.create = void 0;
+exports.getLivros = exports.create = void 0;
 const livros_schema_1 = require("../models/livros.schema");
 function create(_livro) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -28,3 +28,13 @@ function create(_livro) {
     });
 }
 exports.create = create;
+function getLivros() {
+    return __awaiter(this, void 0, void 0, function* () {
+        let result = yield livros_schema_1.livro.find({});
+        if (result) {
+            return result;
+        }
+        return null;
+    });
+}
+exports.getLivros = getLivros;

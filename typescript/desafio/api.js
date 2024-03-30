@@ -17,14 +17,15 @@ const livros_controller_1 = require("./biblioteca/controllers/livros.controller"
 const database_1 = require("./biblioteca/database/database");
 const PORT = process.env.PORT;
 const app = (0, express_1.default)();
-(0, database_1.run)();
+(0, database_1.connect)();
 app.use(express_1.default.json());
 app.get("/healt", (req, res) => {
     res.sendStatus(200);
 });
-app.get("/livros", (req, res) => {
-    res.json({ livro: "teste" });
-});
+app.get("/livros", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    let livros = yield (0, livros_controller_1.getLivros)();
+    res.json(livros);
+}));
 app.post("/livros", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     let livro = req.body;
     let result = yield (0, livros_controller_1.create)(livro);
