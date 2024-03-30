@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Express, Request, Response } from "express";
 import { create } from "./biblioteca/controllers/livros.controller";
 import { run } from "./biblioteca/database/database";
 
@@ -26,5 +26,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(3000, () => {
-  console.log("server started at port 3000");
+  console.log("server started at port 3000 ");
 });
